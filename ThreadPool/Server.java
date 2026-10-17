@@ -27,6 +27,7 @@ public class Server {
                 PrintWriter toClient = new PrintWriter(socket.getOutputStream(),true, StandardCharsets.UTF_8)
                 )
             {
+                socket.setSoTimeout(10_000);
                 String message = fromClient.readLine();
                 if(message == null){
                     System.out.println("Client disconnected without sending a message.");
