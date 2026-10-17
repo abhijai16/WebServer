@@ -23,7 +23,7 @@ public class Server {
                 try(Socket client = clientSocket;
                     BufferedReader fromClient = new BufferedReader(new InputStreamReader(client.getInputStream(),StandardCharsets.UTF_8));
 
-                    PrintWriter toClient = new PrintWriter(client.getOutputStream(), true, StandardCharsets.UTF_8)) 
+                    PrintWriter toClient = new PrintWriter(client.getOutputStream(), true, StandardCharsets.UTF_8))
                 {
                     String message = fromClient.readLine();
 
